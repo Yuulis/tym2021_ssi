@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="img/Yuulis_icon.png">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZM41JSMPWD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-ZM41JSMPWD');
+    </script>
+
+    <title>5. 学習結果 | 強化学習でAIを避難させてみた</title>
+</head>
+
+<body>
+    <div class="pageback">
+        <div class="pagebody">
+            <h1><u>学習結果</u></h1>
+
+            <p><a href="index.html">
+                    <<< Topに戻る</a>
+            </p>
+
+            <h2 class="heading">実際にはどう動くのか</h2>
+
+            <p>実際に人工知能が学習データにしたがって動いている様子を動画で紹介します。(動画終盤、画面がかくついてしまいました...)</p>
+            <iframe class="centering" width="720" height="480" src="https://www.youtube.com/embed/XVN1bZe-0pQ"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <p>環境観察のため左右にちらちら向いてしまうのは仕方ないと思いましたが、場所によっては階段に移行するまでの時間がかなり長くなってしまうところもあります。そのあたりの改良が必要ですね。</p>
+
+            <h2 class="heading">学習の記録</h2>
+            <p>今回の学習の記録です。</p>
+
+            <h3>報酬曲線</h3>
+            <p>エージェントが得た報酬の、20000エピソードあたりの平均値の推移を示すグラフです。横軸がエピソード数、縦軸が獲得報酬です。400万回あたりから平均報酬が成功の目安である1.1~1.2付近で安定してきていることが分かります。学習には約5時間程度かかりました。
+            </p>
+            <p><img src="img/Environment_Cumulative Reward.svg" alt="報酬曲線"></p>
+
+            <h3>エピソード長曲線</h3>
+            <p>20000エピソードあたりの、1エピソードの長さの平均値の推移を示すグラフです。横軸がエピソード数、縦軸が長さです。今回はできるだけ長く生き残れていると報酬が多くなるように学習させたので、学習を重ねるにつれてエピソード長が長くなっています。推移の仕方は報酬曲線と似ていますね。
+            </p>
+            <p><img src="img/Environment_Episode Length.svg" alt="エピソード長曲線"></p>
+
+            <p class="footer">学習結果の紹介は以上です。</p>
+        </div>
+    </div>
+</body>
+
+</html>
